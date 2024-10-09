@@ -20,8 +20,20 @@ You can change these using VS Code's keyboard shortcuts.
 
 ## Recommended Settings
 
-Set `find-it-faster.general.useTerminalInEditor` to true to have the extension window open in the
-editor panel rather than in the terminal panel.
+```json
+{
+  // Setup FindItFaster extension
+  "find-it-faster.customTasks": [
+    // Choose folder to open on new window
+    {
+      "name": "zoxide",
+      "command": "cursor $(zoxide query --interactive)"
+    }
+  ],
+  // Allow top open a file with line number
+  "find-it-faster.general.openCommand": "code -g"
+}
+```
 
 ## Features
 
@@ -87,7 +99,7 @@ Ensure you can run `fzf`, `rg`, `bat`, and `sed` directly in your terminal. If t
 
 This extension contributes various settings. Please refer to the VS Code settings UI for a complete list and descriptions.
 
-## Known Issues
+## FAQ
 
 Please refer to the [FAQ.md](FAQ.md) file for known issues and frequently asked questions.
 

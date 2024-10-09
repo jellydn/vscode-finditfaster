@@ -9,7 +9,7 @@ enum LogLevel {
 	NONE = "NONE",
 }
 
-export class Logger {
+class Logger {
 	private outputChannel = window.createOutputChannel("Find It Faster");
 
 	private logLevel: LogLevel = LogLevel.INFO;
@@ -113,3 +113,5 @@ export class Logger {
 		this.outputChannel.appendLine(`["${logLevel}" - ${title}] ${message}`);
 	}
 }
+
+export const logger = new Logger();

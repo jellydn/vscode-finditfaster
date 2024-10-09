@@ -12,10 +12,6 @@ Probably VS Code is waiting for you to complete a multi-step keyboard shortcut (
 "terminal.integrated.allowChords": false
 ```
 
-## There's a file that cannot be found / searched through?
-
-This extension enables you to search through multiple directories: the process working directory, the workspace directories, and any additional directories you specify in the extension settings. What paths are included is configured through the settings. There's a `listSearchLocations` command that can show you which paths are currently being indexed.
-
 ## I found a bug!
 
 Please file a Github issue. Provide detailed information including:
@@ -24,16 +20,3 @@ Please file a Github issue. Provide detailed information including:
 - VS Code version
 - Does it happen after you reset to default settings (if relevant)?
 - Anything special about your configuration / workspace
-
-## Known Issues
-
-### Windows
-
-There are two ways of running this extension on Windows:
-
-1. **Natively using Powershell**: This feature is experimental. Please file an issue on Github if you find one.
-2. **Through WSL** (Windows Subsystem for Linux): You can run this extension inside a Remote-WSL workspace.
-
-### NixOS
-
-The bash scripts use a shebang that conflicts with NixOS: `#!/bin/bash`. As bash isn't available in `/bin`, a workaround is to follow the instructions in [Issue #44](https://github.com/tomrijndorp/vscode-finditfaster/issues/44) and change the shebangs manually. After this, the extension should work normally.
